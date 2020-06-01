@@ -8,11 +8,11 @@
         <version>2.3.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>de.mattaghoni</groupId>
-    <artifactId>cardhive</artifactId>
+    <groupId>de.mattaghoni.cardhive</groupId>
+    <artifactId>gameservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>cardhive</name>
-    <description>Application for Deckbuilder Games like "Slay the Spire"</description>
+    <name>gameservice</name>
+    <description>Microservice for managing card-games</description>
 
     <properties>
         <java.version>11</java.version>

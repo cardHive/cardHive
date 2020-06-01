@@ -1,4 +1,4 @@
-package de.mattaghoni.cardhive;
+package de.mattaghoni.cardhive.gameservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
