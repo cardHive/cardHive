@@ -3,9 +3,9 @@ services:
   cardservice-postgresql:
     image: postgres:12.1
     # volumes:
-    #     - ~/volumes/jhipster/CardService/postgresql/:/var/lib/postgresql/data/
+    #     - ~/volumes/cardHive/GameService/postgresql/:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=CardService
+      - POSTGRES_USER=GameService
       - POSTGRES_PASSWORD=
     ports:
       - 5432:5432
