@@ -10,7 +10,6 @@ import javax.persistence.*;
 import static javax.persistence.GenerationType.AUTO;
 
 @Getter
-@Setter
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,7 +24,7 @@ public class Game {
     @Override
     public String toString() {
         return String.format(
-                "Game[id=%d, name='%s']",
+                "Game[id: %d, name: '%s']",
                 id, name
         );
     }
