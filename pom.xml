@@ -17,6 +17,7 @@
     <java.version>11</java.version>
     <spring-boot-admin.version>2.2.3</spring-boot-admin.version>
     <spring-cloud.version>Hoxton.SR5</spring-cloud.version>
+    <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
   </properties>
   <dependencies>
     <dependency>
@@ -166,6 +167,26 @@
             <include>**/*Tests.java</include>
           </includes>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.5</version>
+        <executions>
+          <execution>
+            <id>prepare-agent</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>report</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
