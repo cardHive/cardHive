@@ -20,6 +20,8 @@ matrix:
         directories:
           # we also need to cache folder with Cypress binary
           - ~/.cache
+      before_script:
+        - npm install -g @angular/cli
       install:
         - npm install
       script:
