@@ -17,7 +17,7 @@
     <java.version>11</java.version>
     <spring-boot-admin.version>2.2.3</spring-boot-admin.version>
     <spring-cloud.version>Hoxton.SR5</spring-cloud.version>
-    <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
+    <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     <sonar.coverage.exclusions>de.mattaghoni.cardhive.CardhiveApplication</sonar.coverage.exclusions>
   </properties>
   <dependencies>
