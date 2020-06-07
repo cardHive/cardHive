@@ -1,24 +1,26 @@
 package de.mattaghoni.cardhive.domain.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
 
-import javax.persistence.Column;
+import javax.persistence.*;
+
+import static javax.persistence.GenerationType.AUTO;
 
 @Getter
 @Setter
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
 public class Game {
     @Id
-    @Setter
+    @GeneratedValue(strategy = AUTO)
     private Long id;
 
     @Column
-    private final String name;
-
-    public Game(String name) {
-        this.name = name;
-    }
+    private String name;
 
     @Override
     public String toString() {
