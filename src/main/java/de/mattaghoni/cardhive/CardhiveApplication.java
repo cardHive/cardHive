@@ -1,4 +1,4 @@
-package de.mattaghoni.cardhive.gameservice;
+package de.mattaghoni.cardhive;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
