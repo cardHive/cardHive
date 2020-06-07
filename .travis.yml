@@ -20,10 +20,8 @@ matrix:
         directories:
           # we also need to cache folder with Cypress binary
           - ~/.cache
-      before_script:
-        - npm install -g @angular/cli
       install:
-        - npm install
+        - (cd card-hive && npm install)
       script:
         - (cd card-hive && npm run test)
         - (cd card-hive && npm run e2e -- --record --key 6e4bf6f4-9341-4db4-a3eb-04493b6d8f6b)
