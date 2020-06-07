@@ -1,4 +1,4 @@
-package de.mattaghoni.cardhive.gameservice.domain.entity;
+package de.mattaghoni.cardhive.domain.entity;
 
 import lombok.Getter;
 import lombok.Setter;
