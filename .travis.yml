@@ -13,10 +13,7 @@ matrix:
       node_js: "14"
       addons:
         apt:
-          sources:
-            - google-chrome
           packages:
-            - google-chrome-stable
             - libgconf-2-4
       cache:
         npm: true
