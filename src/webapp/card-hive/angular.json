@@ -25,7 +25,10 @@
               "apps/card-hive/src/favicon.ico",
               "apps/card-hive/src/assets"
             ],
-            "styles": ["apps/card-hive/src/styles.styl"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "apps/card-hive/src/styles.styl"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -83,7 +86,10 @@
               "apps/card-hive/tsconfig.app.json",
               "apps/card-hive/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/card-hive/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/card-hive/**"
+            ]
           }
         },
         "test": {
@@ -118,8 +124,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/card-hive-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/card-hive-e2e/**"]
+            "tsConfig": [
+              "apps/card-hive-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/card-hive-e2e/**"
+            ]
           }
         }
       }
