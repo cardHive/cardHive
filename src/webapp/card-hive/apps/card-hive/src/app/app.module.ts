@@ -14,6 +14,9 @@ import {registerLocaleData} from "@angular/common";
 import localDe from "@angular/common/locales/de";
 import localDeExtra from "@angular/common/locales/extra/de";
 import {MatMenuModule} from "@angular/material/menu";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 
 registerLocaleData(localDe, 'de-De', localDeExtra)
 
@@ -22,6 +25,7 @@ registerLocaleData(localDe, 'de-De', localDeExtra)
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -29,9 +33,22 @@ registerLocaleData(localDe, 'de-De', localDeExtra)
     MatIconModule,
     MatListModule,
     MatMenuModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient]
+      }
+    }),
   ],
   exports: [],
   providers: [],
   bootstrap: [AppComponent],
 })
+
 export class AppModule {}
+
+// AOT compilation support
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

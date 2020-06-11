@@ -6,8 +6,21 @@
       <mat-icon>menu</mat-icon>
     </button>
 
-    <span i18n="toolbarTitle | Title of the toolbar@@tolbarTitle">CardHive</span>
+    <span>{{ 'ToolBarTitle' | translate }}</span>
 
   </mat-toolbar-row>
+
+  <span class="form-inline">
+    <select
+      class="form-control"
+      #selectedLang
+      (change)="switchLang(selectedLang.value)">
+      <option *ngFor="let language of translate.getLangs()"
+        [value]="language"
+        [selected]="language === translate.currentLang">
+        {{ language }}
+      </option>
+    </select>
+  </span>
 
 </mat-toolbar>

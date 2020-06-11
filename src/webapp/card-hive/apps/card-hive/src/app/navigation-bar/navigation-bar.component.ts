@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit} from '@angular/core';
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'card-hive-navigation-bar',
@@ -8,9 +9,12 @@ import {Component, EventEmitter, OnInit} from '@angular/core';
 export class NavigationBarComponent implements OnInit {
   toggleSidenav: EventEmitter<Object>;
 
-  constructor() { }
+  constructor(public translate: TranslateService) { }
 
   ngOnInit(): void {
   }
 
+  switchLang(lang: string) {
+    this.translate.use(lang);
+  }
 }

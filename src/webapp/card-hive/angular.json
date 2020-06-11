@@ -8,12 +8,6 @@
           "style": "styl"
         }
       },
-      "i18n": {
-        "sourceLocale": "en-US",
-        "locales": {
-          "de": "apps/card-hive/src/locale/messages.de.xlf"
-        }
-      },
       "root": "apps/card-hive",
       "sourceRoot": "apps/card-hive/src",
       "prefix": "card-hive",
@@ -65,9 +59,6 @@
                   "maximumError": "10kb"
                 }
               ]
-            },
-            "de": {
-              "localize": ["de"]
             }
           }
         },
@@ -79,9 +70,6 @@
           "configurations": {
             "production": {
               "browserTarget": "card-hive:build:production"
-            },
-            "de": {
-              "browserTarget": "card-hive:build:de"
             }
           }
         },
