@@ -1,4 +1,4 @@
-import {getGreeting} from '../support/app.po';
+import {getGreeting, getNavigation} from '../support/app.po';
 
 describe('card-hive', () => {
   beforeEach(() => cy.visit('/'));
@@ -9,5 +9,11 @@ describe('card-hive', () => {
 
     // Function helper example, see `../support/app.po.ts` file
     getGreeting().contains('Welcome to card-hive!');
+  });
+
+  it('should have a navigation', () => {
+    cy.login('someDude@someCorp.com', 'hisPassword');
+
+    getNavigation().contains('Games');
   });
 });
