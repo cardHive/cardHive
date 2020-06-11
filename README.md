@@ -1,5 +1,5 @@
 # CardHive
-[![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg)](https://dashboard.cypress.io/#/projects/card-hive/runs)
+[![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg)](https://dashboard.cypress.io/projects/kq7y78/runs)
 [![Build Status](https://travis-ci.org/cardHive/cardHive.svg?branch=master)](https://travis-ci.org/cardHive/gameService)
 [![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=de.mattaghoni%3Acardhive&metric=alert_status)](https://sonarcloud.io/dashboard?id=de.mattaghoni%3Acardhive)
 
