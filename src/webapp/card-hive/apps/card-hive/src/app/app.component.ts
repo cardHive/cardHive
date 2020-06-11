@@ -13,5 +13,4 @@ export class AppComponent {
     translate.addLangs(['en', 'de']);
     translate.setDefaultLang('en');
   }
-  title = 'card-hive';
 }

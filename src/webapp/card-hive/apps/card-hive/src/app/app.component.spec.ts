@@ -1,10 +1,19 @@
 import {async, TestBed} from '@angular/core/testing';
 import {AppComponent} from './app.component';
+import {NavigationBarComponent} from "./navigation-bar/navigation-bar.component";
+import {MatIconModule} from "@angular/material/icon";
+import {TranslateModule} from "@ngx-translate/core";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent],
+      declarations: [AppComponent, NavigationBarComponent],
+      imports:[
+        MatIconModule,
+        MatToolbarModule,
+        TranslateModule.forRoot()
+      ]
     }).compileComponents();
   }));
 
@@ -12,20 +21,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'card-hive'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('card-hive');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain(
-      'Welcome to card-hive!'
-    );
   });
 });
