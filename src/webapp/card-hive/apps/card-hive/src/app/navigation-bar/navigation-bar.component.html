@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="form-inline">
+      <select
+        class="form-control"
+        #selectedLang
+        (change)="switchLang(selectedLang.value)">
+        <option *ngFor="let language of translate.getLangs()"
+          [value]="language"
+          [selected]="language === translate.currentLang">
+          {{ language }}
+        </option>
+      </select>
+    </span>
+    <button mat-icon-button (click)="toggleSidenav.emit()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span id="navTitle">{{ 'ToolBarTitle' | translate }}</span>
+  </mat-toolbar-row>
+</mat-toolbar>

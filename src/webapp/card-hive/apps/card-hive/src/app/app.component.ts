@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'card-hive-root',
@@ -6,5 +7,10 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.styl'],
 })
 export class AppComponent {
-  title = 'card-hive';
+  constructor(
+    public translate: TranslateService
+  ) {
+    translate.addLangs(['en', 'de']);
+    translate.setDefaultLang('en');
+  }
 }

@@ -14,3 +14,6 @@ Main purpose of this project is learning technologies like angular, webflux and
 reactive programming.
 
 Additionally, I like to analyze the data of games in a genre I love. 
+
+
+node_modules/@angular/cli/bin/ng generate @angular/material:navigation navigation
